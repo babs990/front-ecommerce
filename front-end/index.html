@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>e-commerce</title>
+    <script src="script.js" type="module" defer></script>
+</head>
+<body>
+    <nav>
+        <a class="scale" id="logo" href="index.html"> e-commerce </a>
+        <div  class="scale" id="shop">
+            <img src="image/shop.svg" alt="shop" width="20" height="22">
+            <div id="nombreShop">0</div> 
+        </div>
+    </nav>
+
+    <header>
+        <div id="imageHeader" class="reveal">
+            <img src="image/robinet.svg" alt="image" width="503" height="503">
+        </div>
+        <div id="devHeader" class="reveal">
+            <div id="textHeader">
+                Achetez vos matériels de plomberie a des prix abordables !
+            </div>
+            <div  class="scale" id="bouton">
+                <a href="index.html#cardsList">Catalogue</a>
+            </div>    
+        </div>
+    </header>
+
+    <!-- Panier des achats -->
+    <div id="fenetre" class="isClicked">
+        <!--
+        <div class="item">
+            <div class="imgItem">
+                <img src="image/unnamed 1.svg" alt="image" width="60" height="61">
+            </div>
+            <div class="gridItem">
+                <div class="X scale"><img src="image/X.svg" alt="Exit" width="9" height="9"></div>
+                <div class="productName"> Chasse de douche </div>
+                <div class="nombrePrix"> 100000 cfa </div>
+            </div>
+        </div>-->
+        <div class="ligne"></div>
+        <div class="total">
+            <div class="textTotal">Total</div>
+            <div class="prixTotal">0 cfa</div>
+        </div>
+        <div class="validationButton scale" >
+            <a> valider ma commande</a>
+        </div>
+    </div>
+
+    <div id="accroche">
+        <div id='accrocheDev'>
+            Profitez de la qualité de nos produits, les meilleurs sur le marché ! 
+        </div>
+    </div>
+
+    <!-- Liste des produits -->
+    <div class="container py-5">
+        <div  id="cardsList" class="row row-cols-3 reveal ">
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="image/unnamed 1.svg" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <div class="card-text"> chasse de douche marque azus avec une precision parfaite pour  usage de toilette et de ghh </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <div class="price" > 10000 CFA</div>
+                        <a  class="btn btn-primary cardButton">ajouter au panier</a>  
+                      </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="image/unnamed 1.svg" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">robinet de cour et de chambr</h5>
+                      <div class="card-text">Lorem hjhjlklkkk kd;ldkdhdhkdkkkkjkkdkhggj jsssjjjjn sss www </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <div class="price" > 10000 CFA</div>
+                        <a  class="btn btn-primary cardButton">ajouter au panier</a>  
+                      </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="image/unnamed 1.svg" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <div class="card-text">Lorem hjhjlklkkk kd;ldkdhdhkdkkkkjkkdkhggj jsssjjjjn sss www </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <div class="price" > 10000 CFA</div>
+                        <a  class="btn btn-primary cardButton">ajouter au panier</a>  
+                      </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="image/unnamed 1.svg" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <div class="card-text">Lorem hjhjlklkkk kd;ldkdhdhkdkkkkjkkdkhggj jsssjjjjn sss www </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <div class="price" > 10000 CFA</div>
+                        <a  class="btn btn-primary cardButton">ajouter au panier</a>  
+                      </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="image/unnamed 1.svg" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <div class="card-text">Lorem hjhjlklkkk kd;ldkdhdhkdkkkkjkkdkhggj jsssjjjjn sss www </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <div class="price" > 10000 CFA</div>
+                        <a  class="btn btn-primary cardButton">ajouter au panier</a>  
+                      </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="image/unnamed 1.svg" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <div class="card-text">Lorem hjhjlklkkk kd;ldkdhdhkdkkkkjkkdkhggj jsssjjjjn sss www </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <div class="price" > 10000 CFA</div>
+                        <a  class="btn btn-primary cardButton">ajouter au panier</a>  
+                      </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="image/unnamed 1.svg" alt="Card image cap" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <div class="card-text">Lorem hjhjlklkkk kd;ldkdhdhkdkkkkjkkdkhggj jsssjjjjn sss www </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <div class="price"> 10000 CFA</div>
+                        <a  class="btn btn-primary cardButton">ajouter au panier</a>  
+                      </div>
+                </div>    
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>e-commerce</title>
+    <script src="validation.js" type="module" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+          emailjs.init({
+          publicKey: "HmM4ag0cPsBJnnuV0",
+        });
+    })();
+    </script>
+</head>
+<body>
+    <form id="formulaire">
+        <div id="nomPrenom" class="topMargin">
+            <div class="form-group " id="Prenom">
+                <label for="PrenomInput">Prénom *</label>
+                <input type="text" class="form-control" id="PrenomInput" placeholder="Entrer votre Prénom">
+                <div id="validPrenom"></div>
+            </div>
+            <div class="form-group">
+                <label for="NomInput">Nom *</label>
+                <input type="text" class="form-control" id="NomInput" placeholder="Entrer votre nom">
+                <div id="validNom"></div>
+            </div>
+        </div>
+        <div class="form-group topMargin">
+            <label for="AdresseInput">Adresse *</label>
+            <input type="text" class="form-control" id="AdresseInput" placeholder="Entrer votre adresse">
+            <div id="validAdresse"></div>
+        </div>
+        <div class="form-group topMargin">
+            <label for="regionSelect">Région *</label>
+            <select class="form-control" id="regionSelect">
+              <option>Dakar</option>
+              <option>Diourbel</option>
+              <option>Fatick</option>
+              <option>Kaffrine</option>
+              <option>Kaolack</option>
+              <option>Kédougou</option>
+              <option>Kolda</option>
+              <option>Louga</option>
+              <option>Matam</option>
+              <option>Saint-Louis</option>
+              <option>Sédhiou</option>
+              <option>Tambacounda</option>
+              <option>Thiès</option>
+              <option>Ziguinchor</option>
+            </select>
+        </div> 
+        <div id="MailNumber" class="topMargin">
+            <div class="form-group">
+                <label for="numberInput"> Numero telephone * </label>
+                <input type="number" class="form-control" id="numberInput" placeholder="Exemple :+221 77----">
+                <div id="validNumber"></div>
+            </div>
+            <div class="form-group">
+                <label for="mailInput"> Adresse mail *</label>
+                <input type="email" class="form-control" id="mailInput" placeholder="exemple@.com">
+                <div id="validMail"></div>
+            </div>
+        </div>
+        <div class="topMargin" id="Totale"><small>Totale : </small></div>
+        <button class="btn container " id="boutonFormValider" > Valider votre commande </button>
+        <div class="topMargin container" id="bottomForm">
+            <div id="Payemenent">
+                <img src="../image/payementLivraison.svg" alt="cercle" width="16" height="16">
+                Paiement après livraison
+            </div>
+            <a type="button" class="btn" id="bottomBoutton" href="../index.html" > Continuer mes achats </a>
+        </div>
+    </form>
+</body>
+</html>

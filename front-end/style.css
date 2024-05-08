@@ -1,0 +1,601 @@
+:root{
+    /*color*/
+    --fond : #191F22;
+    --gris : #555555;
+    --grisBlanc : #D9D9D9;
+    --blanc : #fff;
+    --black : #060606;
+    --orange : #AA2804;
+
+    /*text */
+    --title-font : 'Nunito';
+    --title-font-weight : 700;    
+    --title-font-size-grand: 3rem;
+    --title-line-height-grand: 3.5rem;
+
+    --header-font : 'Nunito';
+    --header-font-weight :400;
+    --header-font-size-grand : 2rem;
+    --header-line-height-grand : 2.375rem;
+
+    --body-font : 'Nunito';
+    --body-font-weight :400;
+    --body-font-size-grand : 1.5rem;
+    --body-line-height-grand : 1.75rem;
+    
+    --title-font-size-moyen: 2.5rem;
+
+    --header-font-size-moyen : 2rem;
+
+    --body-font-size-moyen : 1.375rem;
+
+    --title-font-size-petit: 2rem;
+
+    --header-font-size-petit : 1.5rem;
+
+    --body-font-size-petit : 1rem;
+}
+
+*{
+    margin: 0;
+}
+
+html{
+    scrollbar-width:10px;
+    scrollbar-color: var(--fond) var(--grisBlanc);
+}
+
+body{
+    background-color: var(--fond);
+    height: 1200px;
+    font-family: var(--title-font);
+}
+
+nav{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    font-size: var(--body-font-size-petit);
+    font-weight: var(--title-font-weight);
+    color: #fff;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: var(--fond);
+    top: 0;
+    z-index: 2;
+}
+
+.scale:hover{
+    scale: 110%;
+    transition-duration: 0.6s;
+}
+
+#logo{
+    margin-left: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    position: fixed;
+}
+
+#shop{
+    margin-left: auto;
+    margin-right: 200px;
+    cursor: pointer;
+    display: flex;
+}
+
+#nombreShop{
+    position: absolute;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: var(--orange);
+    border-radius: 100%;
+    font-size: 12px;
+}
+
+header{
+    display: flex;
+    font-size: var(--header-font-size-grand);
+    font-weight: var(--title-font-weight);
+    line-height: 4rem;
+    margin-top: 100px;
+    color: var(--blanc);
+    height: 600px;
+}
+
+#imageHeader{
+    margin-top: 60px;
+    margin-left: 140px;
+}
+
+#textHeader{
+    width: 510px;
+}
+
+#devHeader{
+    margin-left: auto;
+    margin-right: 200px;
+    margin-top: 200px;
+}
+
+#bouton{
+    margin-top: 35px;
+    font-size: var(--body-font-size-moyen);
+    border-radius: 33px;
+    background-color: var(--orange);
+    text-align: center;   
+    height: 60px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#bouton a{
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+#bouton:hover{
+    background-color: #aa2804d2 ;
+    transition-duration: 0.3s;
+}
+
+#accroche{
+    width: 100%;
+    height: 200px;
+    background-color: var(--black);
+    font-size: var(--header-font-size-grand);
+    color: #fff;
+}
+#accrocheDev{
+    max-width: 620px;
+    height: 90px;
+    margin: auto;
+    padding-top: 60px;
+}
+
+#fenetre{
+    position:fixed;
+    margin-top: 80px;
+    height: 600px;
+    width: 300px;
+    right: 0;
+    top: 0;
+    background-color: var(--gris);
+    border-top-left-radius: 33px;
+    border-bottom-left-radius: 33px;
+    z-index: 1;
+    overflow-y: auto;
+    scrollbar-width:thin;
+    scrollbar-color: var(--blanc) var(--black);
+}
+
+.isClicked{
+    display: none;
+}
+
+#cardsList{
+    font-family: var(--title-font);
+    z-index: 0;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card{
+    background-color: var(--gris);
+    border-radius: 30px;
+    box-shadow: rgba(211, 210, 218, 0.15) 0px 48px 100px 0px;
+    width: 250px;
+    height: 470px;
+}
+
+.card:hover{
+    scale: 105%;
+    transition-duration: 1s;
+}
+.card-img-top{
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.col{
+    width: 250px;
+}
+.card-body{
+    padding: 25px;
+    margin-top: -15px;
+}
+.cardButton{
+    border-radius: 50px;
+    width: 150px;
+}
+
+.cardButton:hover{
+    background-color: #060606;
+}
+
+.price{
+    color: var(--blanc);
+    font-weight: var(--title-font-weight);
+    font-size: 12px;
+}
+
+.card-title{
+    color: #0d6efd;
+}
+
+.card-text{
+    color: var(--blanc);
+    font-size: 12px;
+}
+
+.item{
+    display: flex;
+    width: 230px;
+    height: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color:var(--grisBlanc) ;
+    border-radius: 24px;
+    font-family: var(--body-font);
+}
+
+.gridItem{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+}
+
+.X{
+    margin-left: auto;
+    margin-right: 10px;
+    width: 9px;
+    cursor: pointer;
+}
+
+.productName{
+    color: var(--fond);
+    font-size: var(--body-font-size-petit);
+    min-width: 141px ;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ligne{
+    width: 100%;
+    height: 2px;
+    background-color: var(--grisBlanc);
+    margin-top: 50px;
+}
+
+.total{
+    display: flex;
+    width: 138px;
+    height: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+    padding-right: 0;
+    margin-right:0;
+    margin-left: auto;
+}
+
+.textTotal{
+    font-weight: var(--title-font-weight);
+    color: var(--black);
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.prixTotal{
+    width: 100px;
+    background-color: var(--grisBlanc);
+    font-weight: var(--title-font-weight);
+    color: var(--black);
+    padding-left: 2px;
+    padding-right: 0;
+    padding-bottom: 0;
+    border-radius: 33px;
+    margin-left: 4px;
+    text-align: center;
+}
+
+.nombrePrix{
+    background-color: var(--fond);
+    color: var(--blanc);
+    text-align: center;
+    width: 120px;
+    font-size: 12px;
+    margin-left: 50px;
+    border-bottom-right-radius: 24px;
+    padding-bottom: 0;
+}
+
+.validationButton{
+    width: 180px;
+    height: 40px;
+    padding-top: 8px;
+    text-align: center;
+    color: #fff;
+    border-radius: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--orange);
+    margin-top: 50px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.validationButton a{
+    text-decoration: none;
+    color: #fff;
+}
+.validationButton:hover{
+    background-color: #aa2804d2 ;
+    transition-duration: 0.3s;
+}
+
+#formulaire{
+    margin-top: 100px;
+    max-width: 884px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: var(--body-font-size-petit);
+    color: #fff;
+}
+
+#formulaire input{
+    box-sizing: border-box;
+    border: 2px solid ;
+    border-color: var(--grisBlanc);
+    background-color: var(--fond);
+    color: var(--blanc);
+    border-radius: 12px;
+    height: 42px;
+    height: 42px;
+    margin-top: 5px;
+}
+
+#formulaire input::placeholder{
+    color: #ffffff82;
+}
+
+#formulaire select{
+    box-sizing: border-box;
+    border: 2px solid ;
+    border-color: var(--grisBlanc);
+    background-color: var(--fond);
+    color: var(--blanc);
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
+#nomPrenom,#MailNumber{
+    display: grid;
+    grid-template-columns: repeat(2,415px);
+    gap: 54px;
+}
+
+.topMargin{
+    margin-top: 40px;
+}
+
+#petit{
+    margin-top: 40px;
+}
+#boutonFormValider{
+    background-color: var(--orange);
+    color: var(--blanc);
+    border-radius: 12px;
+    height: 42px;
+}
+
+#bottomForm{
+    display: flex;
+    height: 42px;
+}
+#bottomBoutton{
+    background-color: #0482AA;
+    color: var(--blanc);
+    border-radius: 12px;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.reveal{
+    opacity: 0;
+    transform:translateY(-30px) ;
+}
+
+.revealVisible{
+    opacity: 100%;
+    transform: translateY(0);
+    transition-duration: 3s ;
+}
+
+#validPrenom,#validNom,#validAdresse,#validNumber,#validMail{
+    color: rgb(215, 45, 45);
+    margin-top: 5px;
+}
+
+@media screen and (max-width : 1180px) {
+    #imageHeader{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width : 1180px) {
+    header{
+        margin-top: 130px;
+        display: grid;
+        height: auto;
+        width: 503px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-areas: 
+        'in'
+        'la';
+        grid-template-columns: 503px 225px;
+    }
+    #imageHeader{
+        margin: 0;
+        grid-area: la;
+    }
+    #textHeader{
+        margin: 0;
+    }
+    #devHeader{
+        margin: 0;
+        grid-area: in;
+        margin-bottom:20px ;
+    }
+}
+@media screen and (max-width : 1000px) {
+    .card{
+        width: 200px;
+        height: 420px;
+    }
+    .col{
+        width: 200px;
+    }
+    .card-img-top{
+        border-radius: 50px;
+        padding: 10px;
+    }
+    
+    .card-body{
+        padding: 25px;
+        margin-top: -15px;
+    }
+    .cardButton{
+        border-radius: 50px;
+        width: 100px;
+        font-size: 14px;
+    }
+        
+    .price{
+        font-size: 12px;
+    }
+    
+    .card-title{
+        font-size: 16px;
+    }
+    
+    .card-text{
+        font-size:12px ;
+    }       
+}
+@media screen and (max-width : 930px) {
+    #nomPrenom,#MailNumber{
+        display: grid;
+        grid-template-columns: repeat(2,40%);
+        gap: 34px;
+    }
+    #formulaire{
+        width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+    }       
+}
+@media screen and (max-width : 650px) {
+    #logo{
+        margin-left: 50px;
+    }
+    
+    #shop{
+        margin-right: 50px;
+    }    
+    header{
+        grid-template-columns: 300px;
+        grid-template-rows: 220px 225px;
+        font-size: var(--title-font-size-petit);
+        font-weight: var(--title-font-weight);  
+        width: 370px;
+        line-height: 3rem;
+        max-width: 300px;
+    }
+    #imageHeader img{
+        width: 202px;
+        height: 202px;
+    }
+    #devHeader{
+        max-width: 300px;
+    }
+    #textHeader{
+        max-width: 330px;
+    }
+    #bouton{
+        margin-top: 25px;
+        font-size: var(--body-font-size-petit);
+        text-align: center;   
+        height: 50px;
+        width: 130px;
+    }  
+    #accroche{
+        height: 120px;
+        font-size: var(--body-font-size-petit);
+        font-weight: var(--title-font-weight);
+    }
+    #accrocheDev{
+        max-width: 220px;
+        height: 50px;
+        margin: auto;
+        padding-top: 30px;
+    }      
+}
+@media screen and (max-width : 540px) {
+    #formulaire{
+        width: 330px;
+    }
+    #nomPrenom,#MailNumber{
+        display: grid;
+        grid-template-columns: repeat(1,330px);
+        gap: 54px;
+    } 
+    #bottomForm{
+        display: grid;
+    }
+    #bottomBoutton{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width : 540px) {
+    #formulaire{
+        width: 280px;
+    }
+    #nomPrenom,#MailNumber{
+        display: grid;
+        grid-template-columns: repeat(1,280px);
+        gap: 54px;
+    } 
+}
+@media screen and (max-width : 436px) {
+    #cardsList{
+        width: 200px;
+        padding-left: 50px;
+    }
+    .card{
+        width: 200px;
+    }
+    .col{
+        width: 200px;
+    }
+}
+@media screen and (max-width : 330px) {
+    header{
+        grid-template-columns: 250px;
+        grid-template-rows: 300px 225px;
+        max-width: 250px;
+    }
+    #devHeader{
+        max-width: 250px;
+    }
+    #textHeader{
+        max-width: 250px;
+    }
+}
