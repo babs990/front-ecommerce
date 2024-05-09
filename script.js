@@ -8,9 +8,7 @@ const header = document.querySelector('#devHeader')
 const card = document.querySelector('#cardsList')
 const validation = document.querySelector('.validationButton')
 
-/**
- * Permet de masquer ou de cacher le panier des achats
- */
+/* Permet de masquer ou de cacher le panier des achats */
 boutonShop.addEventListener('click',()=>{
     const fenetre = boutonShop.parentElement.parentNode.querySelector('#fenetre')
     if(fenetre.classList.contains('isClicked')){
@@ -20,21 +18,19 @@ boutonShop.addEventListener('click',()=>{
     }
 })
 
-/**
- * Animation
- */
-/*window.addEventListener('load',()=>{*/
-    const Observer = new IntersectionObserver((entries)=>{
-        for(const entry of entries){
-            if(entry.isIntersecting){
-                entry.target.classList.add('revealVisible')
-                Observer.unobserve(entry.target)
-            }
+
+/* Animation */
+const Observer = new IntersectionObserver((entries)=>{
+    for(const entry of entries){
+        if(entry.isIntersecting){
+            entry.target.classList.add('revealVisible')
+            Observer.unobserve(entry.target)
         }
-    })
-    Observer.observe(header)
-    Observer.observe(robinet)
-    Observer.observe(card)
+    }
+})
+Observer.observe(header)
+Observer.observe(robinet)
+Observer.observe(card)
 
     /*
     let produit = []
@@ -51,11 +47,8 @@ boutonShop.addEventListener('click',()=>{
         const fenetre = document.querySelector('#fenetre')
         fenetre.prepend(it.item)
     })*/
-/*})*/
 
-/**
- * Verification est ce que l'utilisateur a rempli le panier avant d'aller valider sa commande
- */
+/* Verification est ce que l'utilisateur a rempli le panier avant d'aller valider sa commande */
 validation.addEventListener(('click'),()=>{
     if(parseInt(document.querySelector('.prixTotal').innerText)<=0){
         alert('veuillez remplir le panier pour valider votre achat')
@@ -72,12 +65,16 @@ validation.addEventListener(('click'),()=>{
     localStorage.setItem('fenetre',JSON.stringify(document.querySelector('.prixTotal').innerText))
 })
 
+/* Responsive */
+const viewportWidth = innerWidth
+if(viewportWidth<=650){
+    document.querySelector('#imageHeader').querySelector('img').setAttribute('src','image/robinetPetit.svg')
+}else{
+    document.querySelector('#imageHeader').querySelector('img').setAttribute('src','image/robinet.svg')
+}
 
 
-/**
- * Recuperer les elements via un appel Http puis les ajouters á ('#cardsList')
- */
-
+/* Recuperer les elements via un appel Http puis les ajouters á ('#cardsList') */
 try{
     const products = await fetchJson('')
     const card = new listeProducts(products)

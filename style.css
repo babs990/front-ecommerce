@@ -517,10 +517,6 @@ header{
         line-height: 3rem;
         max-width: 300px;
     }
-    #imageHeader img{
-        width: 202px;
-        height: 202px;
-    }
     #devHeader{
         max-width: 300px;
     }
