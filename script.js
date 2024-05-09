@@ -68,7 +68,7 @@ validation.addEventListener(('click'),()=>{
 /* Responsive */
 const viewportWidth = innerWidth
 if(viewportWidth<=650){
-    document.querySelector('#imageHeader').querySelector('img').setAttribute('src','image/robinetPetit.svg')
+    document.querySelector('#imageHeader').querySelector('img').setAttribute('src','image/robinetPetit.png')
 }else{
     document.querySelector('#imageHeader').querySelector('img').setAttribute('src','image/robinet.svg')
 }
