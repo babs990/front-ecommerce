@@ -23,7 +23,7 @@ boutonShop.addEventListener('click',()=>{
 /**
  * Animation
  */
-window.addEventListener('load',()=>{
+/*window.addEventListener('load',()=>{*/
     const Observer = new IntersectionObserver((entries)=>{
         for(const entry of entries){
             if(entry.isIntersecting){
@@ -51,7 +51,7 @@ window.addEventListener('load',()=>{
         const fenetre = document.querySelector('#fenetre')
         fenetre.prepend(it.item)
     })*/
-})
+/*})*/
 
 /**
  * Verification est ce que l'utilisateur a rempli le panier avant d'aller valider sa commande
