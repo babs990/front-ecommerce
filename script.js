@@ -76,7 +76,7 @@ if(viewportWidth<=650){
 
 /* Recuperer les elements via un appel Http puis les ajouters á ('#cardsList') */
 try{
-    const products = await fetchJson('')
+    const products = await fetchJson('https://back-ecommerce-oonw.vercel.app/produits.json')
     const card = new listeProducts(products)
     card.appendTo(document.querySelector('#cardsList'))
 }catch(e){

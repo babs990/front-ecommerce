@@ -22,10 +22,12 @@ export class listeProducts{
 
     onSubmit(e){
         const t = e.currentTarget.parentElement.parentNode.querySelector('.card-title').innerText
-        const id = e.currentTarget.parentElement.parentNode.getAttribute('id')       
+        const id = e.currentTarget.parentElement.parentNode.parentElement.getAttribute('id') 
+        const prix =parseInt(e.currentTarget.parentElement.querySelector('.price').innerText)
         const todo ={
-            title : t,
-            id : id
+            name : t,
+            id : id,
+            prix : prix
         }
         const fenetre = document.querySelector('#fenetre')
         const element = new productItems(todo)
@@ -81,7 +83,7 @@ class productCard{
         })
         const img = createElement('img',{
             class : "card-img-top", 
-            src: `image/${product.id}.png`, 
+            src: `image/${product.id}.svg`, 
             alt : "Card image cap"
         })
         const body = createElement('div',{
@@ -101,7 +103,7 @@ class productCard{
         const prix = createElement('div',{
             class : "price"
         })
-        prix.innerHTML = product.prix
+        prix.innerHTML = `${product.prix} cfa`
         const ajouter = createElement('a',{
             class : "btn btn-primary cardButton"
         })
@@ -135,7 +137,7 @@ export class productItems{
             class : "imgItem"
         })
         const img = createElement ('img',{
-            src: `image/${product.id}.png`, 
+            src: `image/${product.id}.svg`,
             alt: "image" ,
             width: "60", 
             height: "61"
@@ -155,7 +157,7 @@ export class productItems{
         const nombrePrix = createElement('div',{
             class: 'nombrePrix'
         })
-        nombrePrix.innerText = product.prix
+        nombrePrix.innerText = `${product.prix} cfa`
 
 
         imgItem.append(img)

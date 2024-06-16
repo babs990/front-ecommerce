@@ -98,7 +98,8 @@ function sendMail(){
     }
     emailjs.send('service_ui4urr8','template_zpvlswj',params).then((res)=>{
         console.log(res)
-        alert('Message envoyer')
+        document.querySelector('#formulaire').remove()
+        document.querySelector('#done').style.display ='grid'
     }).catch(err => console.log(err))
 }
 function sendMail2(){

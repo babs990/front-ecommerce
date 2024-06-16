@@ -189,7 +189,7 @@ header{
     border-radius: 30px;
     box-shadow: rgba(211, 210, 218, 0.15) 0px 48px 100px 0px;
     width: 250px;
-    height: 470px;
+    height: 500px;
 }
 
 .card:hover{
@@ -224,12 +224,12 @@ header{
 }
 
 .card-title{
-    color: #0d6efd;
+    color:var(--blanc);
 }
 
 .card-text{
-    color: var(--blanc);
-    font-size: 12px;
+    color: #5493f3;
+    font-size: 11px;
 }
 
 .item{
@@ -259,7 +259,8 @@ header{
 
 .productName{
     color: var(--fond);
-    font-size: var(--body-font-size-petit);
+    font-size: 13px;
+    font-weight:var(--title-font-weight) ;
     min-width: 141px ;
     height: 44px;
     margin-left: auto;
@@ -421,12 +422,18 @@ header{
     margin-top: 5px;
 }
 
-@media screen and (max-width : 1180px) {
-    #imageHeader{
-        margin-left: 50px;
-    }
+#done{
+    margin-top: 100px;
+    gap: 30px;
+    justify-content: center;
 }
 
+#texteDone{
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
 @media screen and (max-width : 1180px) {
     header{
         margin-top: 130px;
@@ -441,6 +448,7 @@ header{
         grid-template-columns: 503px 225px;
     }
     #imageHeader{
+        margin-left: 50px;
         margin: 0;
         grid-area: la;
     }
@@ -456,7 +464,7 @@ header{
 @media screen and (max-width : 1000px) {
     .card{
         width: 200px;
-        height: 420px;
+        height: 500px;
     }
     .col{
         width: 200px;
@@ -570,13 +578,17 @@ header{
         gap: 54px;
     } 
 }
-@media screen and (max-width : 436px) {
+@media screen and (max-width : 465px) {
     #cardsList{
         width: 200px;
         padding-left: 50px;
     }
     .card{
         width: 200px;
+        height:450px;
+    }
+    .card-text{
+        font-size: 10px;
     }
     .col{
         width: 200px;
