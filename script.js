@@ -1,4 +1,4 @@
-import { listeProducts, productItems } from "./component/listeProduct.js"
+import { listeProducts } from "./component/listeProduct.js"
 import { fetchJson } from "./function/api.js"
 import { createElement } from "./function/dom.js"
 
@@ -32,21 +32,6 @@ Observer.observe(header)
 Observer.observe(robinet)
 Observer.observe(card)
 
-    /*
-    let produit = []
-    const produitInstorage = localStorage.getItem('produits')
-    if(produitInstorage){
-        produit = JSON.parse(produitInstorage)
-    }
-    produit.forEach((item)=>{
-        let pro = {
-            title: item.title,
-            id: item.id
-        }
-        const it = new productItems(pro)
-        const fenetre = document.querySelector('#fenetre')
-        fenetre.prepend(it.item)
-    })*/
 
 /* Verification est ce que l'utilisateur a rempli le panier avant d'aller valider sa commande */
 validation.addEventListener(('click'),()=>{

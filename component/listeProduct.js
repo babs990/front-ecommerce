@@ -17,7 +17,6 @@ export class listeProducts{
         document.querySelectorAll('.cardButton').forEach((item)=>{
             item.addEventListener('click',e => this.onSubmit(e))
         })
-
     }
 
     onSubmit(e){
@@ -70,7 +69,6 @@ export class listeProducts{
 }
 
 class productCard{
-
     #element
 
     constructor(product){
